@@ -1,21 +1,22 @@
 let express = require("express");
+
 let dbo = require("./db/conn");
-let collections = require("./services/projectService")
+
 let app = express();
 
 //var app = require('express')();
 let http = require('http').createServer(app);
 let io = require('socket.io')(http);
 
-let projectRoute = require("./routes/projects")
+const projectRouter = require('./routes/projects');
 
 
 var port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
-app.use("/api/projects", projectRoute);
 
+app.use('/api/projects', projectRouter);
 
 // app.get("/projects", function (request, response) {
 //      dbo.getDb().collection("projects").find({}).toArray(function (err,res) {
@@ -26,6 +27,8 @@ app.use("/api/projects", projectRoute);
 // });
 
 // app.post("/projects", function (request, response) {
+  
+//   //add some validation logic
 //   const project = request.body;
 //   console.log(JSON.stringify(project));
 //   if(project){
@@ -36,17 +39,17 @@ app.use("/api/projects", projectRoute);
 //   response.sendStatus(204);
 // });
 
-//socket test
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
-  setInterval(()=>{
-    socket.emit('number', parseInt(Math.random()*10));
-  }, 1000);
+// //socket test
+// io.on('connection', (socket) => {
+//   console.log('a user connected');
+//   socket.on('disconnect', () => {
+//     console.log('user disconnected');
+//   });
+//   setInterval(()=>{
+//     socket.emit('number', parseInt(Math.random()*10));
+//   }, 1000);
 
-});
+// });
 
 dbo.connectToDatabase(function(err){
 if (err){

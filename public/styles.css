@@ -1,8 +1,8 @@
-.title{
+.title {
   color: white;
 }
-.mainText{
-  color:white;
+.mainText {
+  color: white;
 }
 
 body {
@@ -10,17 +10,16 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: hsl(39, 90%, 89%);
-
 }
 
 main {
   flex: 1 0 auto;
 }
-img.animated-gif{
+img.animated-gif {
   width: 1250px;
   height: auto;
 }
-h2{
+h2 {
   color: black;
   text-align: center;
 }

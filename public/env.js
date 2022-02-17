@@ -32,7 +32,7 @@ $(document).ready(function(){
   
  
   //test get call
-  $.get('/projects',(result) => {
+  $.get('/api/projects',(result) => {
     for (let project of result){
       $('#projects').append(createProjectCard(project));
     }
@@ -44,12 +44,12 @@ $(document).ready(function(){
     const data = {
       projectID : $('#project-id').val(),
       title: $('#project-title').val(),
-      info: $('#project-description').val(),
+      info: $('#project-info').val(),
       img: $('#project-image').val(),
       
     };
     var settings = {
-      "url": "/projects",
+      "url": "/api/projects",
       "method": "POST",
       "timeout": 0,
       "headers": {
