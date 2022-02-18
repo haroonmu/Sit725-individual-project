@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Project</title>
+
+
+<!-- adding link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <!-- creating nav bar in head -->
+    <header>
+      <!-- normal nav bar for html page -->
+        <nav class="nav-wraper black">
+          <div class="container">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="index.html">About</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- nav bar for small screen and mobile -->
+        <ul class="sidenav" id="mobile-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+<div style="padding: 30px;"></div>
+
+<!-- starting main page here -->
+    <main>
+<!-- creating container for projects -->
+
+        <div class="container">    
+            <div class="row" id="projects">
+            </div>            
+        </div>
+
+<!-- creating project adding form -->
+        <div id="create-project-form" class="modal modal-fixed-footer" style="background-color: cornsilk;">
+          <div class="modal-content" >
+            <h4>Create a new project</h4>
+            <div class="row">
+              <form class="col s12">
+
+                <div class="row"> <!--adding project number-->>
+                  <div class="input-field col s12">
+                    <input id="project-id" type="number">
+                    <label for="project-id">Project ID</label>
+                  </div>
+                </div>
+
+                <div class="row">  <!-- adding project tittle-->
+                  <div class="input-field col s12">
+                    <input id="project-title" type="text">
+                    <label for="project-title">Project Title</label>
+                  </div>
+                </div>
+
+                <div class="row">  <!--adding project discription-->
+                  <div class="input-field col s12">
+                    <input id="project-info" type="text">
+                    <label for="project-info">Project Description</label>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">  <!-- adding footor buttons-->
+            <a href="#!" class="modal-close waves-effect waves-light black btn">Close</a>
+            <a href="#!" class="waves-effect waves-light blue btn" id="save-project">Save</a>
+          </div>
+        </div>
+        <!-- adiing form adding button -->
+        <div style="padding-bottom: 5px; margin: 80px;">
+        <a class="btn-floating btn-large waves-effect waves-light black right pulse modal-trigger" href="#create-project-form"><i class="material-icons">add</i></a>
+      </div>
+
+    </main>
+
+    <!-- adding scripts at the end of the body so html run without any hurdle -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="env.js"></script>
+  
+
+</body>
+
+</html>

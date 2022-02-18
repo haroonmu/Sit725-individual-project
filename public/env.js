@@ -45,9 +45,9 @@ $(document).ready(function(){
       projectID : $('#project-id').val(),
       title: $('#project-title').val(),
       info: $('#project-info').val(),
-      img: $('#project-image').val(),
-      
-    };
+      };
+
+
     var settings = {
       "url": "/api/projects",
       "method": "POST",
@@ -57,6 +57,8 @@ $(document).ready(function(){
       },
       "data": JSON.stringify(data),
     };
+
+    
     
     $.ajax(settings).done(function (response) {
       console.log(response);

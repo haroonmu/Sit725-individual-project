@@ -1,108 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>New Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link href="styles.css" rel="stylesheet">
+    <link href="indexstyle.css" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <nav class="nav-wraper black">
-          <div class="container">
-            <a href="#" class="brand-logo">Logo</a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-links">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+  
+      <!-- adding container for index page elements -->
+
+      <div class="container">
+          <h1> Muhammad Haroon</h1>
+          <h2>Software Engineer and UI Designer</h2>
+          <div class="pic">
+              <img src="./assets/haroon.png" alt="photograph on Muhammad Haroon">
           </div>
-
-        </nav>
-        <ul class="sidenav" id="mobile-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </header>
-<div style="padding: 30px;"></div>
-    <main>
-
-        <div class="container">    
-            <div class="row" id="projects">
-            </div>            
-        </div>
-
-        <div id="create-project-form" class="modal modal-fixed-footer" style="background-color: cornsilk;">
-          <div class="modal-content" >
-            <h4>Create a new project</h4>
-            <div class="row">
-              <form class="col s12">
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="project-id" type="number">
-                    <label for="project-id">Project ID</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="project-title" type="text">
-                    <label for="project-title">Project Title</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="project-info" type="text">
-                    <label for="project-info">Project Description</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="project-image" type="file" accept=".gif,.jpg,.jpeg,.png">
-                    <label for="project-image" style="margin-top: 15px;">Select Image</label>
-                  </div>
-                </div>
-
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-light black btn">Close</a>
-            <a href="#!" class="waves-effect waves-light blue btn" id="save-project">Save</a>
-          </div>
-        </div>
-        <div style="padding-bottom: 5px; margin: 80px;">
-        <a class="btn-floating btn-large waves-effect waves-light black right pulse modal-trigger" href="#create-project-form"><i class="material-icons">add</i></a>
+          <p>
+              A software engineer in process, ready to handle the hardships and challanges coming in way. Studing SIT725 make me realise my skill and interest for UI designing.
+          </p>
+          <a href="home.html" class="btn">Click for Projects</a>
       </div>
 
-    </main>
-
-    <script src="/socket.io/socket.io.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="env.js"></script>
-  
-
+      
 </body>
-
 </html>
