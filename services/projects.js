@@ -1,10 +1,8 @@
 const dbo= require("../db/conn");
 
 let projectCollection;
-//  getProjectCollection() = dbo.getDb().collection("projects");
-// setTimeout(() => {
-// }, 2000);
 
+//creating funtion that return getprojectcollection all projects from database
 const getProjectCollection = () =>{
         if(projectCollection){
             return projectCollection ;
@@ -16,16 +14,15 @@ const getProjectCollection = () =>{
             return null;
         }
 }
-
+// respond to get api and sending project fron database
 const getAllProjects = (res) => { 
     getProjectCollection().find().toArray((err, result) => {
         if (err) throw err;
         res.send(result);
     });
 }
-
+//services of get by Id  
 const getProjectByID = (id, res) => {
-    //const getProjectCollection() = dbo.getDb().collection("projects");
     console.log(id);
     getProjectCollection().find({ projectID: id }).toArray((err, result) => {
         if (err) throw err;
@@ -33,14 +30,15 @@ const getProjectByID = (id, res) => {
     });
 }
 
+//services for post api to post new project
 const insertProject = (project, res) => {
-    //const getProjectCollection() = dbo.getDb().collection("projects");
     getProjectCollection().insertOne(project, (err, result) => {
         if (err) throw err;
         res.send({ result: 204 });
     });
 }
 
+//exposting the funtions here to routes
 module.exports={
     getAllProjects,
     getProjectByID,

@@ -5,6 +5,8 @@ let socket = io();
 socket.on('number', (msg) => {
     console.log('Random number: ' + msg);
 })
+
+// funtion of creating card including all card details
 function createProjectCard(project){
   return `
  
@@ -26,6 +28,7 @@ function createProjectCard(project){
 `;
 }
 
+// funtion for creating the back end working of card and make console ready to respond
 $(document).ready(function(){
   console.log('Ready')
   
@@ -59,7 +62,7 @@ $(document).ready(function(){
     };
 
     
-    
+    // ajax querry respond the console and creating card and pushing into to card
     $.ajax(settings).done(function (response) {
       console.log(response);
       $('#projects').append(createProjectCard(data));
