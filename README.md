@@ -9,16 +9,16 @@ TO run this code on your local desktop:
 (don't forget to add node_modules)
 
 => After Cloning, run the server using
-.
-npm run start
-.
+
+        npm run start
+
 OR
-.
-npm run start-dev
-.
+
+        npm run start-dev
+
 OR
-.
-node server.js
+
+        node server.js
 
 => you will get something like
 Connect to mongo atlas
