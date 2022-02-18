@@ -9,23 +9,23 @@ TO run this code on your local desktop:
 (don't forget to add node_modules)
 
 => After Cloning, run the server using
-
+.
 npm run start
-
+.
 OR
-
+.
 npm run start-dev
-
+.
 OR
-
+.
 node server.js
 
 => you will get something like
 Connect to mongo atlas
 Listening on port 5050
-
+.
 OR
-
+.
 Connect to mongo atlas
 Listening on port 8080
 
@@ -38,3 +38,5 @@ Or
 http://localhost:5050
 
 according to the port you are getting
+.
+.
